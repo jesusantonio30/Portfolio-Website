@@ -1,0 +1,54 @@
+/* General */
+
+html {
+    font-size: 16px;
+    font-family: "Poppins", serif;
+    color: #fff;
+}
+
+body {
+    background-color: #1A1A1A;
+}
+
+#head-container, nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Header */
+
+#head-container {
+    margin: 3.75rem auto 0;
+    max-width: 95rem;
+}
+
+/* Navigation */
+nav {
+    width: 37%;
+}
+
+#nav-home a{
+    font-family: "Oleo Script", serif;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul a {
+    color: #C1C1C1;
+    text-decoration: none;
+    font-family: "Montserrat", serif;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+#nav-contact-button button {
+    border: 1px solid #4FC3F7;
+    border-radius: 0.5625rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 0.75rem 1rem;
+}
