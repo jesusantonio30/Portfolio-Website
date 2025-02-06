@@ -14,8 +14,11 @@
     <!-- CSS Styles -->
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/styles.css">
+
+    <!-- JavaScript -->
+    <script src="/main.js" defer></script>
 </head>
-<body>
+<body class="darkmode">
 
     <!-- Header & Navigation -->
     <header id="head-container">
@@ -32,11 +35,10 @@
             <div id="nav-contact-button">
                 <a href="#"><button type="button">Contact Me</button></a>
             </div>
-            <div id="nav-light-toggle">
-                <button aria-label="Toggle light/dark theme">
-                    <img src="/Images/Group.svg" alt="Light and dark mode icon">
-                </button>
-            </div>
+            <button aria-label="Toggle light/dark theme" id="nav-light-toggle">
+                <img src="/Images/Group.svg" alt="Dark mode icon">
+                <img src="/Images/moon-fill.svg" alt="Light mode icon">
+            </button>
         </nav>
     </header>
 

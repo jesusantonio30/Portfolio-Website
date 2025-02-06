@@ -1,13 +1,21 @@
 /* Global */
 
+:root {
+    --base-color: #fff;
+    --links: #C1C1C1;
+    --base-dark: #1A1A1A;
+    --accent: #4FC3F7;
+
+}
+
 html {
     font-size: 16px;
     font-family: "Poppins", serif;
-    color: #fff;
+    color: var(--base-color);
 }
 
 body {
-    background-color: #1A1A1A;
+    background-color: var(--base-dark);
 }
 
 #head-container{
@@ -27,13 +35,38 @@ nav, nav ul {
 }
 
 .gradient-text {
-    background: linear-gradient(to right, #4FC3F7, #fff);
+    background: linear-gradient(to right, var(--accent), var(--base-color));
     background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+}
+
+/* Theme Toggle */
+
+.darkmode {
+    --base-color: #000;
+    --links: #050505;
+    --base-dark: #E0E8F6;
+    --accent: #4FC3F7;
+}
+
+#nav-light-toggle img:last-child {
+    display: none;
+}
+
+.darkmode #nav-light-toggle img:first-child {
+    display: none;
+}
+
+.darkmode #nav-light-toggle img:last-child {
+    display: block;
+}
+
+.darkmode #hero-content {
+    background-image: none;
 }
 
 /* Header */
@@ -50,7 +83,7 @@ nav {
 #nav-home a{
     font-family: "Oleo Script", serif;
     font-size: 2rem;
-    color: #fff;
+    color: var(--base-color);
     text-decoration: none;
 }
 
@@ -63,28 +96,28 @@ nav ul li {
 }
 
 nav ul a {
-    color: #C1C1C1;
+    color: var(--links);
     text-decoration: none;
     font-family: "Montserrat", serif;
 }
 
-#nav-light-toggle button {
+#nav-light-toggle {
     background-color: transparent;
     border: transparent;
 }
 
 #nav-contact-button button {
-    border: 1px solid #4FC3F7;
+    border: 1px solid var(--accent);
     border-radius: 0.5625rem;
     background-color: transparent;
-    color: #fff;
+    color: var(--base-color);
     padding: 0.75rem 1rem;
 }
 
 /* Hero */
 
 #hero {
-    height: 100vh;
+    height: 80vh;
 }
 
 #hero-content {
@@ -110,6 +143,10 @@ nav ul a {
     margin-bottom: 0.5rem;
 }
 
+#developer h1, #hero-content p {
+    color: var(--base-color);
+}
+
 #developer h3 {
     font-size: 1.625rem;
     font-family: inherit;
@@ -131,8 +168,8 @@ nav ul a {
 #hero-content button {
     background-color: transparent;
     padding: 1.09375rem 2.90625rem;
-    border: 1px solid #4FC3F7;
+    border: 1px solid var(--accent);
     border-radius: 4.6875rem;
-    color: #fff;
+    color: var(--base-color);
     font-size: 1rem;
 }
