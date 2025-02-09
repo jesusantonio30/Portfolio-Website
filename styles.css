@@ -1,78 +1,86 @@
 /* Global */
 
 :root {
-    --base-color: #fff;
+    --text-color: #fff;
     --links: #C1C1C1;
     --base-dark: #1A1A1A;
-    --accent: #4FC3F7;
-
+    --base-accent: #4FC3F7;
+    --button-accent: #4FC3F7;
+    --button-accent-active: #4fc2f7a5;
+    --home-color: #fff;
 }
 
 html {
-    font-size: 16px;
-    font-family: "Poppins", serif;
-    color: var(--base-color);
+    font-size: 18px;
+    /* font-family: "Poppins", serif; */
+    color: var(--text-color);
 }
 
 body {
     background-color: var(--base-dark);
 }
 
-#head-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+button {
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--text-color);
+    border: 1px solid var(--button-accent);
 }
 
-nav, nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+button:hover:not(#nav-light-toggle) {
+    outline: 2px solid var(--button-accent);
+    transform: scale(1.05);
+    transition: 70ms;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-.pop {
+button:active:not(#nav-light-toggle) {
+    outline: 2px solid var(--button-accent-active);
+}
+
+.poppins {
     font-family: "Poppins", serif;
 }
 
-.gradient-text {
-    background: linear-gradient(to right, var(--accent), var(--base-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
+.montserrat {
+    font-family: "Montserrat", serif;
 }
 
 /* Theme Toggle */
 
-.darkmode {
-    --base-color: #000;
+.lightmode {
+    --text-color: #484E53;
     --links: #050505;
     --base-dark: #E0E8F6;
     --accent: #4FC3F7;
+    --button-accent: #484E53;
+    --button-accent-active: #484e5371;
+    --home-color: #000;
 }
 
 #nav-light-toggle img:last-child {
     display: none;
 }
 
-.darkmode #nav-light-toggle img:first-child {
+.lightmode #nav-light-toggle img:first-child {
     display: none;
 }
 
-.darkmode #nav-light-toggle img:last-child {
+.lightmode #nav-light-toggle img:last-child {
     display: block;
 }
 
-.darkmode #hero-content {
+.lightmode #hero-content {
     background-image: none;
 }
 
 /* Header */
 
-#head-container {
-    margin: 3.75rem auto 0;
+#head-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3.33rem auto 0;
 }
 
 /* Navigation */
@@ -82,13 +90,19 @@ nav {
 
 #nav-home a{
     font-family: "Oleo Script", serif;
-    font-size: 2rem;
-    color: var(--base-color);
+    font-size: 1.78rem;
+    color: var(--home-color);
     text-decoration: none;
 }
 
 nav ul {
     width: 36.9%;
+}
+
+nav, nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul li {
@@ -99,6 +113,11 @@ nav ul a {
     color: var(--links);
     text-decoration: none;
     font-family: "Montserrat", serif;
+    font-weight: 500;
+}
+
+nav ul a:hover {
+    color: var(--base-accent);
 }
 
 #nav-light-toggle {
@@ -107,11 +126,8 @@ nav ul a {
 }
 
 #nav-contact-button button {
-    border: 1px solid var(--accent);
-    border-radius: 0.5625rem;
-    background-color: transparent;
-    color: var(--base-color);
-    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    padding: 0.67rem 0.89rem;
 }
 
 /* Hero */
@@ -125,7 +141,7 @@ nav ul a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin: 3.625rem auto;
+    margin: 3.22rem auto;
     width: 68%;
     height: 78%;
     display: flex;
@@ -135,41 +151,48 @@ nav ul a {
     text-align: center;
 }
 
+.gradient-text {
+    background: linear-gradient(to right, var(--base-accent), var(--text-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
 #developer {
     height: 17.5%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.44rem;
 }
 
 #developer h1, #hero-content p {
-    color: var(--base-color);
+    color: var(--text-color);
 }
 
 #developer h3 {
-    font-size: 1.625rem;
+    font-size: 1.44rem;
     font-family: inherit;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 #hero-content h1 {
-    font-size: 3.9375rem;
+    font-size: 3.5rem;
     font-weight: bold;
 }
 
 #hero-content p {
     width: 77%;
-    margin-bottom: 2.5rem;
-    font-size: 1.1875rem;
-    line-height: 1.875rem;
+    margin-bottom: 2.22rem;
+    font-size: 1.056rem;
+    line-height: 1.67rem;
 }
 
 #hero-content button {
-    background-color: transparent;
-    padding: 1.09375rem 2.90625rem;
-    border: 1px solid var(--accent);
-    border-radius: 4.6875rem;
-    color: var(--base-color);
-    font-size: 1rem;
+    padding: 0.972rem 2.583rem;
+    border-radius: 4.167rem;
+    font-size: 1.125rem;
 }
