@@ -8,6 +8,8 @@
     --button-accent: #4FC3F7;
     --button-accent-active: #4fc2f7a5;
     --home-color: #fff;
+    --info-title: #C1C1C1;
+    --info: #A9A9A9;
 }
 
 html {
@@ -27,14 +29,14 @@ button {
     border: 1px solid var(--button-accent);
 }
 
-button:hover:not(#nav-light-toggle) {
+button:hover:not(#nav-light-toggle, .project-button) {
     outline: 2px solid var(--button-accent);
     transform: scale(1.05);
     transition: 70ms;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-button:active:not(#nav-light-toggle) {
+button:active:not(#nav-light-toggle, .project-button) {
     outline: 2px solid var(--button-accent-active);
 }
 
@@ -50,6 +52,21 @@ button:active:not(#nav-light-toggle) {
     font-family: "Inter", serif;
 }
 
+.title {
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--text-color);
+}
+
+.title small {
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
 /* Theme Toggle */
 
 .lightmode {
@@ -60,6 +77,8 @@ button:active:not(#nav-light-toggle) {
     --button-accent: #484E53;
     --button-accent-active: #484e5371;
     --home-color: #000;
+    --info-title: #484E53;
+    --info: #484E53;
 }
 
 #nav-light-toggle img:last-child {
@@ -220,21 +239,6 @@ nav ul a:hover {
     align-items: center;
 }
 
-.title {
-    text-align: center;
-}
-
-.title h2 {
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: var(--text-color);
-}
-
-.title small {
-    font-size: 0.78rem;
-    font-weight: 600;
-}
-
 #about-me-content p {
     max-height: 12.5rem;
     height: 100%;
@@ -247,4 +251,77 @@ nav ul a:hover {
     font-size: 0.83rem;
     border-radius: 3.056rem;
     padding: 1.0278rem 3.11rem;
+}
+
+/* Projects */
+
+#projects {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#projects-content {
+    max-width: 63.56rem;
+    width: 100%;
+    margin: auto;
+}
+
+#project-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2.22rem;
+}
+
+#projects .card {
+    max-height: 16.67rem;
+    max-width: 19.72rem;
+    height: 100%;
+    width: 100%;
+}
+
+#projects .card img {
+    width: 100%;
+}
+
+#projects .card figcaption {
+    margin-top: 1.78rem;
+    height: 3.72rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#projects .card p {
+    color: var(--info-title);
+    font-weight: 600;
+    font-size: 1.11rem;
+}
+
+#projects .card small {
+    color: var(--info);
+    font-size: 0.78rem;
+}
+
+#projects .project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#projects .card .btn-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+#projects .card button {
+    width: 2.11rem;
+    height: 2.167rem;
+    background-image: url(/Images/send.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 3.61rem;
 }
