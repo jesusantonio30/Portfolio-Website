@@ -19,120 +19,145 @@
     <script src="/main.js" defer></script>
 </head>
 <body class="lightmode">
+    <div id="container">
+        <!-- Header & Navigation -->
+        <header id="head-container">
+            <nav>
+                <div id="nav-home">
+                    <a href="#" aria-label="Go to Homepage">Jesus</a>
+                </div>
+                <ul class="montserrat">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Resume</a></li>
+                </ul>
+                <div id="nav-contact-button">
+                    <button type="button">Contact Me</button>
+                </div>
+                <button aria-label="Toggle light/dark theme" id="nav-light-toggle">
+                    <img src="/Images/Group.svg" alt="Dark mode icon">
+                    <img src="/Images/moon-fill.svg" alt="Light mode icon">
+                </button>
+            </nav>
+        </header>
 
-    <!-- Header & Navigation -->
-    <header id="head-container">
-        <nav>
-            <div id="nav-home">
-                <a href="#" aria-label="Go to Homepage">Jesus</a>
-            </div>
-            <ul class="montserrat">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Resume</a></li>
-            </ul>
-            <div id="nav-contact-button">
+        <!-- Hero Section -->
+        <main id="hero" class="poppins">
+            <section id="hero-content">
+                <div id="developer">
+                    <h1>JESUS MORALES</h1>
+                    <h3 class="gradient-text">DEVELOPER</h3>
+                </div>
+                <p>
+                    Hey there! I'm a Developer who's absolutely passionate about building amazing apps with code! 
+                    At 22 years old, I'm always excited to dive into new technologies and challenge myself to learn and grow. 💻✨
+                </p>
                 <button type="button">Contact Me</button>
-            </div>
-            <button aria-label="Toggle light/dark theme" id="nav-light-toggle">
-                <img src="/Images/Group.svg" alt="Dark mode icon">
-                <img src="/Images/moon-fill.svg" alt="Light mode icon">
-            </button>
-        </nav>
-    </header>
+            </section>
+        </main>
 
-    <!-- Hero Section -->
-    <main id="hero" class="poppins">
-        <section id="hero-content">
-            <div id="developer">
-                <h1>JESUS MORALES</h1>
-                <h3 class="gradient-text">DEVELOPER</h3>
+        <!-- About Me Section -->
+        <section id="about-me" class="inter">
+            <div id="about-me-content">
+                <div class="title">
+                    <h2>About Me</h2>
+                    <small class="gradient-text">Get to know me</small>
+                </div>
+                <p>
+                    Hey, I'm Jesus Morales, a passionate Developer focused on crafting interactive and responsive web experiences. 
+                    I specialize in HTML, CSS, JavaScript, and React and am currently expanding my full-stack knowledge through Codecademy's 
+                    Full-Stack Engineer Career Path. I love problem-solving and continuously improving my skills to build clean, efficient, 
+                    and user-friendly applications.
+                    <br>
+                    Beyond coding, I'm a huge anime fan (One Piece is my all-time favorite), and I enjoy spontaneous road trips to new places 
+                    with my family. I'm also big on personal finance and love learning from Ramit Sethi to build a strong financial future. 
+                    Whether it's coding, exploring, or leveling up in life, I always aim to grow and take on new challenges.
+                </p>
+                <button type="button">View Resume</button>
             </div>
-            <p>
-                Hey there! I'm a Developer who's absolutely passionate about building amazing apps with code! 
-                At 22 years old, I'm always excited to dive into new technologies and challenge myself to learn and grow. 💻✨
-            </p>
-            <button type="button">Contact Me</button>
         </section>
-    </main>
-
-    <!-- About Me Section -->
-    <section id="about-me" class="inter">
-        <div id="about-me-content">
-            <div class="title">
-                <h2>About Me</h2>
-                <small class="gradient-text">Get to know me</small>
+        <!-- Projects -->
+        <section id="projects" class="inter">
+            <div id="projects-content">
+                <div class="title">
+                    <h2>Projects</h2>
+                    <small class="gradient-text">Some of my Work</small>
+                </div>
+                <div id="project-cards">
+                    <article class="card">
+                        <figure>
+                            <img src="/Images/onepiececlubthumbnail.png" alt="One Piece Cllub website thumbnail">
+                            <figcaption>
+                                <div class="project-info">
+                                    <p>One Piece Club!</p>
+                                    <small>HTML/CSS</small>
+                                </div>
+                                <div class="btn-container">
+                                    <button type="button" class="project-button" title="View Project"></button>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <article class="card">
+                        <figure>
+                            <img src="/Images/bluescopethumbnail.png" alt="BlueScope Clone website thumbnail">
+                            <figcaption>
+                                <div class="project-info">
+                                    <p>BlueScope Clone</p>
+                                    <small>HTML/CSS</small>
+                                </div>
+                                <div class="btn-container">
+                                    <button type="button" class="project-button" title="View Project"></button>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
             </div>
-            <p>
-                Hey, I'm Jesus Morales, a passionate Developer focused on crafting interactive and responsive web experiences. 
-                I specialize in HTML, CSS, JavaScript, and React and am currently expanding my full-stack knowledge through Codecademy's 
-                Full-Stack Engineer Career Path. I love problem-solving and continuously improving my skills to build clean, efficient, 
-                and user-friendly applications.
-                <br>
-                Beyond coding, I'm a huge anime fan (One Piece is my all-time favorite), and I enjoy spontaneous road trips to new places 
-                with my family. I'm also big on personal finance and love learning from Ramit Sethi to build a strong financial future. 
-                Whether it's coding, exploring, or leveling up in life, I always aim to grow and take on new challenges.
-            </p>
-            <button type="button">View Resume</button>
-        </div>
-    </section>
-    <!-- Projects -->
-    <section id="projects" class="inter">
-        <div id="projects-content">
-            <div class="title">
-                <h2>Projects</h2>
-                <small class="gradient-text">Some of my Work</small>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="inter">
+            <form action="" id="contact-content">
+                <div class="title">
+                    <h2>Get In Touch</h2>
+                    <small class="gradient-text">Lets work together</small>
+                </div>
+                <div id="contact-inputs">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="John Doe" class="inputs" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="example@email.com" class="inputs">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                    <button type="submit">Get in Touch</button>
+                </div>
+            </form>
+        </section>
+        <footer class="inter">
+            <div id="footer-contact">
+                <h4>Let's Work Together -</h4>
+                <a href="mailto:morales.jesusant@gmail.com">
+                    <button type="button"><img src="/Images/skill-icons_gmail-light.svg" alt="Gmail link">morales.jesusant@gmail.com</button>
+                </a>
             </div>
-            <div id="project-cards">
-                <article class="card">
-                    <figure>
-                        <img src="/Images/onepiececlubthumbnail.png" alt="One Piece Cllub website thumbnail">
-                        <figcaption>
-                            <div class="project-info">
-                                <p>One Piece Club!</p>
-                                <small>HTML/CSS</small>
-                            </div>
-                            <div class="btn-container">
-                                <button type="button" class="project-button" title="View Project"></button>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article class="card">
-                    <figure>
-                        <img src="/Images/bluescopethumbnail.png" alt="BlueScope Clone website thumbnail">
-                        <figcaption>
-                            <div class="project-info">
-                                <p>BlueScope Clone</p>
-                                <small>HTML/CSS</small>
-                            </div>
-                            <div class="btn-container">
-                                <button type="button" class="project-button" title="View Project"></button>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </article>
+            <hr class="full-width-line">
+            <div id="footer-rights">
+                <small>© 2025 All rights reserved.</small>
+                <div id="footer-socials">
+                    <a href="https://github.com/jesusantonio30" target="_blank">
+                        <button type="button">
+                            <img src="/Images/github.svg" alt="personal github link">
+                        </button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jesus-a-morales78635/" target="_blank">
+                        <button type="button">
+                            <img src="/Images/linkedin.svg" alt="personal linked link">
+                        </button>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- Contact -->
-    <section id="contact" class="inter">
-        <form action="" id="contact-content">
-            <div class="title">
-                <h2>Get In Touch</h2>
-                <small class="gradient-text">Lets work together</small>
-            </div>
-            <div id="contact-inputs">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="John Doe" class="inputs" required>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="example@email.com" class="inputs">
-                <label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
-                <button type="submit">Get in Touch</button>
-            </div>
-        </form>
-    </section>
+        </footer>
+    </div>
 </body>
 </html>
