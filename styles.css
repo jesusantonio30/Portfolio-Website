@@ -52,12 +52,16 @@ button:active:not(#nav-light-toggle, .project-button, #footer-socials button) {
     font-family: "Inter", serif;
 }
 
+.title {
+    margin-bottom: 35px;
+}
+
 .title, #hero-content, #about-me-content p{
     text-align: center;
 }
 
 .title h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.33rem, 3vw, 2.5rem);
     font-weight: bolder;
     color: var(--text-color);
 }
@@ -137,7 +141,7 @@ button:active:not(#nav-light-toggle, .project-button, #footer-socials button) {
 /* Container */
 
 #container {
-    max-width: 1512px;
+    width: clamp(400px, 97vw, 1512px);
     margin: 0 auto
 }
 
@@ -149,18 +153,18 @@ button:active:not(#nav-light-toggle, .project-button, #footer-socials button) {
 
 /* Navigation */
 nav {
-    width: 74.5%;
+    width: clamp(750px, 74.5vw, 1126px);
 }
 
 #nav-home a{
     font-family: "Oleo Script", serif;
-    font-size: 1.78rem;
+    font-size: clamp(1.33rem, 2.12vw, 1.78rem);
     color: var(--home-color);
     text-decoration: none;
 }
 
 nav ul {
-    width: 36.9%;
+    width: clamp(250px, 27.45vw, 415px);
 }
 
 nav, nav ul {
@@ -177,6 +181,7 @@ nav ul a {
     color: var(--links);
     text-decoration: none;
     font-weight: 500;
+    font-size: clamp(0.73rem, 1.19vw, 1rem);
 }
 
 nav ul a:hover {
@@ -189,14 +194,15 @@ nav ul a:hover {
 }
 
 #nav-contact-button button {
-    border-radius: 0.5rem;
-    padding: 0.67rem 0.89rem;
+    border-radius: clamp(0.36rem, 0.6vw, 0.5rem);
+    padding: clamp(0.5rem, 0.8vw, 0.67rem) clamp(0.65rem, 1.06vw, 0.89rem);
+    font-size: clamp(0.67rem, 1.06vw, 0.89rem);
 }
 
 /* Hero */
 
 #hero {
-    height: 80vh;
+    height: clamp(364px, 21.63vw, 327px);
 }
 
 #hero-content {
@@ -214,67 +220,66 @@ nav ul a:hover {
 }
 
 #developer {
-    height: 17.5%;
+    height: clamp(90px, 13.07vw, 134px);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 0.44rem;
+    margin-top: 253px;
+    margin-bottom: clamp(0.444rem, calc(2.778rem - 2vw), 2.778rem);
 }
 
 #developer h1, #hero-content p {
     color: var(--text-color);
 }
 
+#hero-content h1 {
+    font-size: clamp(2.33rem, 4.17vw, 3.5rem);
+    font-weight: bold;
+}
+
 #developer h3 {
-    font-size: 1.44rem;
+    font-size: clamp(1rem, 1.72vw, 1.44rem);
     font-family: inherit;
     font-weight: 600;
 }
 
-#hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-}
-
 #hero-content p {
-    width: 77%;
-    margin-bottom: 2.22rem;
-    font-size: 1.056rem;
+    width: clamp(340px, 52.45vw, 793px);
+    margin-bottom: clamp(1.778rem, 2.65vw, 2.22rem);
+    font-size: clamp(0.778rem, 1.256vw, 1.056rem);
     line-height: 1.67rem;
 }
 
 #hero-content button {
-    padding: 0.972rem 2.583rem;
-    border-radius: 4.167rem;
-    font-size: 1.125rem;
+    padding: clamp(13px, 1.16vw, 17.5px) clamp(34px, 3.08vw, 46.5px);
+    border-radius: clamp(55px, 4.96vw, 75px);
+    font-size: clamp(0.67rem, 1.06vw, 0.89rem);
 }
 
 /* About Me */
 
 #about-me-content {
-    width: 55.5%;
-    max-height: 23.94rem;
-    height: 100%;
+    width: clamp(341px, 55.5vw, 840px);
     align-items: center;
 }
 
 #about-me-content p {
-    height: 52.2%;
     line-height: 1.389rem;
     color: var(--text-color);
+    font-size: clamp(0.78rem, 1.2vw, 1rem);
+    margin-bottom: 35px;
 }
 
 #about-me-content button {
-    font-size: 0.83rem;
-    border-radius: 3.056rem;
-    padding: 1.0278rem 3.11rem;
+    font-size: clamp(0.72rem, 1vw, 0.83rem);
+    border-radius: clamp(40px, 3.64vw, 55px);
+    padding: clamp(13.6px, 1.22vw, 18.5px) clamp(41px, 3.7vw, 56px);
 }
 
 /* Projects */
 
 #projects-content {
-    max-width: 63.56rem;
-    width: 100%;
+    width: clamp(333px, 75.66vw, 1144px);
     margin: auto;
 }
 
@@ -284,10 +289,8 @@ nav ul a:hover {
 }
 
 #projects .card {
-    max-height: 16.67rem;
-    max-width: 19.72rem;
-    height: 100%;
-    width: 100%;
+    width: clamp(336px, 23.45vw, 354.67px);
+    margin-bottom: 50px;
 }
 
 #projects .card img {
@@ -295,7 +298,7 @@ nav ul a:hover {
 }
 
 #projects .card figcaption {
-    margin-top: 1.78rem;
+    margin-top: 32px;
     height: 3.72rem;
     display: flex;
     justify-content: space-between;
@@ -304,7 +307,7 @@ nav ul a:hover {
 #projects .card p {
     color: var(--info-title);
     font-weight: 600;
-    font-size: 1.11rem;
+    font-size: clamp(1rem, 1.32vw, 1.11rem);
 }
 
 #projects .card small {
@@ -318,25 +321,24 @@ nav ul a:hover {
 }
 
 #projects .card button {
-    width: 2.11rem;
-    height: 2.167rem;
+    width: 37.67px;
+    height: 36.67px;
     background-image: url(/Images/send.svg);
     background-repeat: no-repeat;
     background-position: center;
     border: none;
-    border-radius: 3.61rem;
+    border-radius: 65px;
 }
 
 /* Contact */
 
 #contact-content {
-    max-height: 38.72rem;
-    height: 100%;
-    width: 46%;
+    height: clamp(548px, 46.1vw, 697px);
+    width: clamp(331px, 46vw, 696px);
 }
 
 #contact-inputs {
-    height: 84%;
+    height: clamp(458px, 38.76vw, 586px);
 }
 
 #contact-inputs label {
@@ -359,12 +361,12 @@ select:-webkit-autofill {
 
 #contact-inputs input {
     height: 12%;
-    padding-left: 32px;
+    padding-left: clamp(29px, 2.25vw, 34px);
 }
 
 #contact-inputs input::placeholder {
     color: #8987A1;
-    font-size: 1.11rem;
+    font-size: clamp(0.78rem, 1.32vw, 1.11rem);
 }
 
 #contact-inputs textarea {
@@ -375,35 +377,35 @@ select:-webkit-autofill {
 }
 
 #contact-inputs input, #contact-inputs textarea {
-    font-size: 1.11rem;
+    font-size: clamp(0.78rem, 1.32vw, 1.11rem);
     color: var(--text-color);
 }
 
 #contact-inputs button {
-    height: 8.89%;
+    height: clamp(55px, 4.1vw, 62px);
     border-radius: 10px;
 }
 
 /* Footer */
 
 footer {
-    max-height: 13.44rem;
-    height: 100%;
+    height: clamp(210px, 16vw, 242px);
 }
 
 #footer-contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 2.22rem;
 }
 
 #footer-contact h4 {
-    font-size: 3.5rem;
+    font-size: clamp(1rem, 4vw, 3.3rem);
     color: var(--text-color);
 }
 
 #footer-contact img {
-    margin-right: 0.5rem;
+    margin-right: clamp(1px, 0.6vw, 9px);
 }
 
 #footer-contact a {
@@ -412,11 +414,12 @@ footer {
 
 #footer-contact a button {
     font-size: 1.38rem;
+    font-size: clamp(0.55rem, 1.65vw, 1.38rem);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem 2.167rem;
-    border-radius: 0.83rem;
+    padding: clamp(11px, 1.19vw, 18px) clamp(10px, 2.58vw, 39.5px);
+    border-radius: 15px;
 }
 
 #footer-rights {
@@ -424,6 +427,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     color: var(--text-color);
+    margin-top: 2.22rem;
 }
 
 #footer-socials a {
@@ -434,6 +438,3 @@ footer {
     border: none;
 }
 
-#footer-socials svg {
-    
-}
