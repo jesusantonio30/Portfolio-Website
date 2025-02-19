@@ -2,8 +2,7 @@
 let lightmode = localStorage.getItem('lightmode');
 
 // Select the toggle button element
-const toggle = document.getElementById('nav-light-toggle');
-
+const toggle = document.querySelectorAll('.nav-light-toggle');
 
 // Function to enable light mode
 const enableLightmode = () => {
@@ -21,8 +20,10 @@ const disableLightmode = () => {
 if(lightmode === 'active') enableLightmode();
 
 // Add event listener to the toggle button
-toggle.addEventListener('click', ()=>{
-    lightmode = localStorage.getItem('lightmode');
-    lightmode !== 'active' ? enableLightmode() : disableLightmode();
-})
+toggle.forEach(e => {
+    e.addEventListener('click', ()=>{
+        let lightmode = localStorage.getItem('lightmode');
+        lightmode !== 'active' ? enableLightmode() : disableLightmode();
+    })
+});
 
