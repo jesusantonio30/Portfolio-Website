@@ -32,14 +32,15 @@ toggle.forEach(e => {
 
                                                                 // Sidebar 
 
+// Select sidebar ID
 const sidebar = document.getElementById('sidebar')
 
+// Function to open sidebar
 const showSidebar = () => {
-    sidebar.style.display = 'block';
-    localStorage.setItem('sidebar', 'active');
+    sidebar.style.display = 'block';;
 };
 
+// Function to close sidebar
 const hideSidebar = () => {
     sidebar.style.display = 'none';
-    localStorage.setItem('sidebar', 'inactive');
 };
