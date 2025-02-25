@@ -1,3 +1,5 @@
+
+                                                                // Light Mode
 // Retrieve the current light mode status from localStorage
 let lightmode = localStorage.getItem('lightmode');
 
@@ -27,3 +29,17 @@ toggle.forEach(e => {
     })
 });
 
+
+                                                                // Sidebar 
+
+const sidebar = document.getElementById('sidebar')
+
+const showSidebar = () => {
+    sidebar.style.display = 'block';
+    localStorage.setItem('sidebar', 'active');
+};
+
+const hideSidebar = () => {
+    sidebar.style.display = 'none';
+    localStorage.setItem('sidebar', 'inactive');
+};
